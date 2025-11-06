@@ -1,0 +1,139 @@
+[
+    {
+        "category": "FSD Projects",
+        "items": [
+          { 
+            "title": "VS Signage Enterprise Website", 
+            "featured": true,
+            "description": "Responsive business website with modern UI/UX and SEO optimization.", 
+            "detailedDescription": "Developed a fully responsive and professional website for VS Signage Enterprise. The project focused on creating a clean, modern user interface to showcase their products and services effectively.\n\nKey features include a dynamic project gallery, a contact form with validation, and on-page SEO optimization to improve search engine visibility. The site was built with React and TailwindCSS, ensuring a fast, maintainable, and scalable solution.",
+            "tech": "React, TailwindCSS, JavaScript", 
+            "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80&fm=webp",
+            "liveUrl": "https://example.com",
+            "repoUrl": "https://github.com/Kavindra-Raj"
+          },
+          { 
+            "title": "Client Portfolio Websites", 
+            "description": "Developed dynamic, interactive, responsive portfolios for various clients.", 
+            "detailedDescription": "Created a series of bespoke portfolio websites for clients in various creative fields. Each portfolio was tailored to the client's personal brand and specific needs, focusing on showcasing their work in the best possible light. The projects emphasized responsive design, fast load times, and a highly polished, professional look.",
+            "tech": "React, TailwindCSS, HTML, CSS", 
+            "imageUrl": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=80&fm=webp",
+            "liveUrl": "https://example.com",
+            "repoUrl": "https://github.com/Kavindra-Raj"
+          },
+          { 
+            "title": "Kria Tech Website", 
+            "description": "Modern and responsive corporate website for a technology solutions provider.", 
+            "detailedDescription": "Developing a sleek and professional corporate website for Kria Tech, a company specializing in innovative technology solutions. The project involves creating a fully responsive and performant site using React and TypeScript, with a focus on clear communication of their services and brand identity. TailwindCSS is used for a utility-first styling approach to ensure a consistent and modern design.",
+            "tech": "React, TypeScript, TailwindCSS", 
+            "imageUrl": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=500&q=80&fm=webp",
+            "liveUrl": "https://example.com",
+            "repoUrl": "https://github.com/Kavindra-Raj"
+          }
+        ]
+    },
+    {
+        "category": "Ongoing Projects",
+        "items": [
+          { 
+            "title": "Custom T-shirt Design E-commerce", 
+            "featured": true,
+            "description": "E-commerce platform with a 3D visualizer for custom t-shirt designs.", 
+            "detailedDescription": "This innovative e-commerce platform allows users to design their own t-shirts in a real-time 3D environment. The project integrates a React front-end with Three.js for the 3D visualization, providing a highly interactive and engaging user experience. The back-end, built with Node.js and Express, handles custom design processing, order management, and payment integration.",
+            "tech": "React, Three.js, Node.js, Express, MongoDB", 
+            "imageUrl": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&q=80&fm=webp",
+            "liveUrl": "#",
+            "repoUrl": "https://github.com/Kavindra-Raj"
+          },
+          { 
+            "title": "LifePlannerAI App", 
+            "description": "Smart daily roadmap app integrating task planning, diet, exercise, and expenses.", 
+            "detailedDescription": "LifePlannerAI is a comprehensive personal management application designed to help users organize their daily lives. It integrates multiple facets of personal planning into a single, intuitive interface.\n\nPowered by the OpenAI API, the app provides intelligent suggestions for task scheduling, meal planning, and workout routines. Firebase is used for real-time data synchronization and user authentication, providing a seamless experience across devices.",
+            "tech": "React, Firebase, OpenAI API", 
+            "imageUrl": "https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?w=500&q=80&fm=webp",
+            "repoUrl": "https://github.com/Kavindra-Raj"
+          }
+        ]
+    },
+    {
+        "category": "AI & Automation Projects",
+        "items": [
+          { 
+            "title": "AI Trading Bot", 
+            "featured": true,
+            "description": "Real-time trading strategies with live market data and paper trading.", 
+            "detailedDescription": "This project involved creating a sophisticated AI-powered trading bot that analyzes real-time market data using various technical indicators. It leverages the yfinance library for data retrieval and pandas-ta for technical analysis. \n\nThe core of the bot is a machine learning model that predicts market movements, allowing for automated paper trading to test strategies without financial risk. It's designed to be modular, allowing for easy integration of new trading algorithms and risk management rules.",
+            "tech": "Python, yfinance, pandas-ta", 
+            "imageUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&q=80&fm=webp",
+            "repoUrl": "https://github.com/Kavindra-Raj",
+            "gallery": [
+                "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&q=80&fm=webp",
+                "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500&q=80&fm=webp",
+                "https://images.unsplash.com/photo-1612178537247-43de16573315?w=500&q=80&fm=webp"
+            ]
+          }
+        ]
+    },
+    {
+        "category": "Freelancing Experience",
+        "items": [
+          { 
+            "title": "6-Arm Robot for Cloud Kitchen", 
+            "featured": true,
+            "description": "Automated multi-tasking robotic arms for kitchen automation.", 
+            "detailedDescription": "This innovative project for a cloud kitchen involved designing and programming a 6-arm robotic system to automate repetitive cooking tasks. Using Raspberry Pi as the central controller, the system could perform actions like chopping, mixing, and plating. The project focused on precision, safety, and efficiency to streamline kitchen operations.",
+            "tech": "Raspberry Pi, Python, IoT", 
+            "imageUrl": "https://images.unsplash.com/photo-1567443024551-f31621be5103?w=500&q=80&fm=webp"
+          },
+          { 
+            "title": "AI Photo Booth", 
+            "featured": true,
+            "description": "Interactive booth with AI-based effects for creative photo experiences.", 
+            "detailedDescription": "Developed an engaging and interactive photo booth experience leveraging Artificial Intelligence (AI). The system, built with Python and OpenCV, uses AI for creative style transfers and background removal. A Flutter-based mobile app allowed for instant sharing of the photos, creating a memorable and shareable event highlight.",
+            "tech": "Python, OpenCV, Flutter", 
+            "imageUrl": "https://images.unsplash.com/photo-1533228100845-081c8f281434?w=500&q=80&fm=webp",
+            "gallery": [
+                "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=500&q=80&fm=webp",
+                "https://images.unsplash.com/photo-1620712943543-26fc7ee99175?w=500&q=80&fm=webp",
+                "https://images.unsplash.com/photo-1513279922550-250c2ce8a813?w=500&q=80&fm=webp"
+            ]
+          },
+          { 
+            "title": "Smart Home Security System", 
+            "description": "Alexa-enabled home lock and monitoring system.", 
+            "detailedDescription": "Engineered a smart home security system featuring a voice-controlled door lock integrated with Amazon Alexa. The system used a Raspberry Pi to control the locking mechanism and a camera for live monitoring. Firebase was implemented for real-time notifications and secure access logs, providing a comprehensive and user-friendly security solution.",
+            "tech": "Raspberry Pi, Python, Firebase", 
+            "imageUrl": "https://images.unsplash.com/photo-1589155717317-1a3b10b7b1b3?w=500&q=80&fm=webp"
+          }
+        ]
+    },
+    {
+        "category": "Academic Projects",
+        "items": [
+          { 
+            "title": "Sign Language Recognition", 
+            "featured": true,
+            "description": "Real-time ML model translating hand gestures into text and speech.", 
+            "detailedDescription": "This was my capstone academic project, focusing on accessibility technology. I built a real-time sign language recognition system using Python, OpenCV for video capture, and a custom-trained TensorFlow model. \n\nThe model could accurately identify and translate a vocabulary of hand gestures into text and then use a text-to-speech engine to voice the translation. The system achieved a 95% accuracy rate on the test dataset.",
+            "tech": "Python, OpenCV, TensorFlow", 
+            "imageUrl": "https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=500&q=80&fm=webp",
+            "repoUrl": "https://github.com/Kavindra-Raj"
+          },
+          { 
+            "title": "Smart Travel Planner", 
+            "description": "Web app for planning optimized travel routes with recommendations.", 
+            "detailedDescription": "A web application designed to simplify trip planning. Users can input multiple destinations, and the app utilizes the Google Maps API to calculate the most efficient route. It also integrates with Firebase to save travel plans and provide personalized recommendations for attractions and restaurants along the route, based on user preferences.",
+            "tech": "React, Firebase, Google Maps API", 
+            "imageUrl": "https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=500&q=80&fm=webp"
+          },
+          { 
+            "title": "AI Exam Proctor", 
+            "description": "AI-based proctoring system to monitor students during online exams.", 
+            "detailedDescription": "Developed an AI-powered exam proctoring system that uses webcam feeds to monitor students for suspicious activities. The system employs computer vision techniques with OpenCV to detect face presence, eye movement, and multiple people in the frame. Alerts are generated in real-time to flag potential cheating, ensuring the integrity of online assessments.",
+            "tech": "Python, OpenCV, TensorFlow, Flask", 
+            "imageUrl": "https://images.unsplash.com/photo-1593106434445-56c613589b6c?w=500&q=80&fm=webp",
+            "repoUrl": "https://github.com/Kavindra-Raj"
+          }
+        ]
+    }
+]
