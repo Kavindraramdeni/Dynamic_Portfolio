@@ -1,4 +1,4 @@
-import React from 'react';
+// ❌ remove import React from 'react';
 
 export interface ContactInfo {
   email: string;
@@ -11,7 +11,7 @@ export interface ContactInfo {
 
 export interface Skill {
   name: string;
-  icon?: React.ReactNode;
+  icon?: unknown; // React.ReactNode replaced with unknown
   color?: string;
 }
 
@@ -26,7 +26,7 @@ export interface TimelineItem {
   period: string;
   description: string;
   details?: string[];
-  icon?: React.ReactNode;
+  icon?: unknown;
 }
 
 export interface Project {
@@ -44,8 +44,8 @@ export interface Project {
 }
 
 export interface ProjectCategory {
-    category: string;
-    items: Project[];
+  category: string;
+  items: Project[];
 }
 
 export interface Certification {
