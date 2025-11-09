@@ -1,23 +1,24 @@
 import { Request, Response } from 'express';
-import User from '../models/user.model';
+import User from '../models/user.model.js'; // <-- .js for ESM on Render
 import jwt from 'jsonwebtoken';
 
+// Generate JWT
 const generateToken = (id: string) => {
     return jwt.sign({ id }, process.env.JWT_SECRET as string, {
         expiresIn: '30d',
     });
 };
 
+// Register user (only one admin)
 export const registerUser = async (req: Request, res: Response) => {
     const { username, password } = req.body;
     if (!username || !password) {
         return res.status(400).json({ message: 'Please provide all fields' });
     }
 
-    // For this portfolio, only allow one admin user to exist.
     const userCount = await User.countDocuments();
     if (userCount > 0) {
-        return res.status(400).json({ message: 'An admin user already exists. Registration is closed.' });
+        return res.status(400).json({ message: 'Admin user already exists.' });
     }
 
     const userExists = await User.findOne({ username });
@@ -37,7 +38,7 @@ export const registerUser = async (req: Request, res: Response) => {
     }
 };
 
-
+// Login user
 export const loginUser = async (req: Request, res: Response) => {
     const { username, password } = req.body;
     if (!username || !password) {
