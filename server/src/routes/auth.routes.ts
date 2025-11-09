@@ -3,20 +3,20 @@ import { registerUser, loginUser } from '../controllers/auth.controller.js'; // 
 
 const router = Router();
 
-// GET /api/auth/register → Inform users that POST is required
+// GET /api/auth/register → Info for browser users
 router.get('/register', (req: Request, res: Response) => {
-  res.status(405).json({
-    message: 'Method Not Allowed. Use POST to register.',
-    usage: {
-      method: 'POST',
-      url: '/api/auth/register',
-      body: {
-        username: 'your_username',
-        password: 'your_password'
-      },
-      tool: 'Use Postman or curl'
-    }
-  });
+    res.status(405).json({
+        message: 'Method Not Allowed. Use POST to register.',
+        usage: {
+            method: 'POST',
+            url: '/api/auth/register',
+            body: {
+                username: 'your_username',
+                password: 'your_password'
+            },
+            tool: 'Use Postman or curl'
+        }
+    });
 });
 
 // POST /api/auth/register
