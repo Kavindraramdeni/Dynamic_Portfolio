@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction, RequestHandler } from 'express';
 import jwt from 'jsonwebtoken';
-import User, { IUser } from '../models/user.model.ts';
+import User, { IUser } from '../models/user.model';
 
 export interface ProtectedRequest extends Request {
     user?: IUser;
