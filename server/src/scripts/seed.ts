@@ -3,13 +3,18 @@ import dotenv from 'dotenv';
 import Project from '../models/project.model';
 import * as fs from 'fs';
 import * as path from 'path';
-import { fileURLToPath } from 'url';
+//import { fileURLToPath } from 'url';
 
 // Load environment variables from the server's .env file
 // FIX: __dirname is not available in ES modules. The following lines define it to allow path resolution.
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = path.dirname(__filename);
+
+// ✅ Ensure __dirname works even if Node treats this as an ES module
+const __dirname = path.resolve();
+
+// ✅ Load environment variables
+dotenv.config({ path: path.resolve(__dirname,'../../.env')});
 
 const seedDatabase = async () => {
   const MONGO_URI = process.env.MONGO_URI;
