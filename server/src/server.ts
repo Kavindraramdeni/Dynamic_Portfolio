@@ -11,8 +11,9 @@ import learningSkillRoutes from './routes/learningSkill.routes';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT) : 10000;
 
+// Middleware
 app.use(cors());
 app.use(express.json());
 
@@ -26,7 +27,8 @@ app.get('/', (req, res) => {
             '/api/auth/register (POST)',
             '/api/auth/login (POST)',
             '/api/testimonials'
-        ]
+        ],
+        documentation: 'Refer to API documentation for details on each endpoint.'
     });
 });
 
@@ -37,13 +39,15 @@ app.use('/api/auth', authRoutes);
 app.use('/api/testimonials', testimonialRoutes);
 app.use('/api/learning-skills', learningSkillRoutes);
 
+// MongoDB connection
 const MONGO_URI = process.env.MONGO_URI;
 
 if (!MONGO_URI) {
-    console.error('FATAL ERROR: MONGO_URI is not defined.');
+    console.error('FATAL ERROR: MONGO_URI is not defined in .env file.');
     (process as any).exit(1);
 }
 
+// Connect to MongoDB and start server
 mongoose.connect(MONGO_URI)
     .then(() => {
         console.log('Successfully connected to MongoDB');
