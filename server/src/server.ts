@@ -17,11 +17,19 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT) : 10000;
 //app.use(cors());
 app.use(
   cors({
-    origin: [
-      "https://dynamicportfolio-omega.vercel.app", // your frontend on Vercel
-      "http://localhost:5173" // optional: for local development
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: function (origin, callback) {
+      const allowedOrigins = [
+        "http://localhost:5173",
+        "https://dynamicportfolio-omega.vercel.app", // your Vercel site
+      ];
+
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        console.log("❌ Blocked by CORS:", origin);
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
