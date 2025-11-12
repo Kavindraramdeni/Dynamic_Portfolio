@@ -13,68 +13,60 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 10000;
 
-// Middleware
-//app.use(cors());
+// ✅ Allow frontend (Vercel) to connect to backend (Render)
 app.use(
   cors({
-    origin: function (origin, callback) {
-      const allowedOrigins = [
-        "http://localhost:5173",
-        "https://dynamicportfolio-omega.vercel.app", // your Vercel site
-      ];
-
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        console.log("❌ Blocked by CORS:", origin);
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: [
+      "https://dynamicportfolio-omega.vercel.app", // your deployed frontend
+      "http://localhost:5173" // local dev
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
 
+// Parse JSON requests
 app.use(express.json());
 
-// Root endpoint
+// ✅ Root route — just for confirmation
 app.get('/', (req, res) => {
-    res.status(200).json({
-        message: 'Welcome to the Portfolio Backend API!',
-        endpoints: [
-            '/api/projects',
-            '/api/contact',
-            '/api/auth/register (POST)',
-            '/api/auth/login (POST)',
-            '/api/testimonials'
-        ],
-        documentation: 'Refer to API documentation for details on each endpoint.'
-    });
+  res.status(200).json({
+    message: '✅ Portfolio Backend is live and running!',
+    endpoints: {
+      projects: '/api/projects',
+      contact: '/api/contact',
+      register: '/api/auth/register (POST)',
+      login: '/api/auth/login (POST)',
+      testimonials: '/api/testimonials',
+      learningSkills: '/api/learning-skills'
+    },
+  });
 });
 
-// Mount routers
+// ✅ Prefix all routes with /api
 app.use('/api/projects', projectRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/testimonials', testimonialRoutes);
 app.use('/api/learning-skills', learningSkillRoutes);
 
-// MongoDB connection
+// ✅ MongoDB connection
 const MONGO_URI = process.env.MONGO_URI;
-
 if (!MONGO_URI) {
-    console.error('FATAL ERROR: MONGO_URI is not defined in .env file.');
-    (process as any).exit(1);
+  console.error('❌ FATAL ERROR: MONGO_URI not found in .env');
+  process.exit(1);
 }
 
-// Connect to MongoDB and start server
-mongoose.connect(MONGO_URI!)
-    .then(() => {
-        console.log('Successfully connected to MongoDB');
-        app.listen(PORT, () => {
-            console.log(`Backend server running on port ${PORT}`);
-        });
-    })
-    .catch(err => {
-        console.error('Database connection error:', err);
-        (process as any).exit(1);
+mongoose
+  .connect(MONGO_URI)
+  .then(() => {
+    console.log('✅ Successfully connected to MongoDB');
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on port ${PORT}`);
     });
+  })
+  .catch((err) => {
+    console.error('❌ Database connection error:', err);
+    process.exit(1);
+  });
