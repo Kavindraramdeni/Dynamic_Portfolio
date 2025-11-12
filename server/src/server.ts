@@ -14,7 +14,18 @@ const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 10000;
 
 // Middleware
-app.use(cors());
+//app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://dynamicportfolio-omega.vercel.app", // your frontend on Vercel
+      "http://localhost:5173" // optional: for local development
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 // Root endpoint
