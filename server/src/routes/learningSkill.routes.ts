@@ -4,9 +4,9 @@ import { protect } from '../middleware/auth.middleware';
 
 const router = Router();
 
-// FIX: Removed explicit 'as RequestHandler' casts. Express router methods are overloaded to accept handlers, and type inference should work.
-router.get('/learning-skills', getLearningSkills);
-router.post('/learning-skills', protect, createLearningSkill);
-router.delete('/learning-skills/:id', protect, deleteLearningSkill);
+// ✅ FIX: Remove '/learning-skills' from each route since it's already prefixed in server.ts
+router.get('/', getLearningSkills);
+router.post('/', protect, createLearningSkill);
+router.delete('/:id', protect, deleteLearningSkill);
 
 export default router;
