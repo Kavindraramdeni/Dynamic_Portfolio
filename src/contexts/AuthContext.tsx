@@ -1,7 +1,16 @@
 import React, { createContext, useState, useEffect, ReactNode } from 'react';
 
-// FIX: Property 'env' does not exist on type 'ImportMeta'.
-const API_BASE_URL = (import.meta as any).env.VITE_API_URL || 'http://localhost:5000/api';
+// ✅ FIX: Define a typed interface for environment variables
+interface ImportMetaEnv {
+    readonly VITE_API_URL: string;
+}
+
+interface ImportMeta {
+    readonly env: ImportMetaEnv;
+}
+
+// ✅ Use this constant everywhere to avoid TS errors
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 interface AuthContextType {
     token: string | null;
@@ -28,7 +37,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }, []);
 
     const login = async (username: string, password: string) => {
-       const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`,{
+        // ✅ Use API_BASE_URL instead of repeating import.meta.env
+        const response = await fetch(`${API_BASE_URL}/auth/login`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, password }),
