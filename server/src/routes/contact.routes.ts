@@ -1,8 +1,9 @@
-import { Router,RequestHandler } from 'express';
+import { Router, RequestHandler } from 'express';
 import { sendContactMessage } from '../controllers/contact.controller';
 
 const router = Router();
 
-router.post('/contact', sendContactMessage as RequestHandler);
+// ✅ FIX: Remove '/contact' — this router is already mounted at '/api/contact'
+router.post('/', sendContactMessage as RequestHandler);
 
 export default router;
