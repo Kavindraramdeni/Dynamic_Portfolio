@@ -161,39 +161,51 @@ export const EDUCATION: TimelineItem[] = [
 
 export const EXPERIENCE: TimelineItem[] = [
   {
-    title: 'Freelance Full Stack Developer',
-    subtitle: 'Self-Employed',
-    period: 'Aug 2025 – Present',
-    description: 'Leveraged full-stack skills to build complete web applications for various clients, as showcased in the FSD projects section.',
+  title: 'Product Engineer',
+    subtitle: 'Kria Tech',
+    period: 'Dec 2025 – Present',
+    description: 'Working on scalable product development involving AI-powered applications, automation systems, and modern web platforms.',
     details: [
-        'Developed both client-side and server-side architecture for dynamic web solutions.',
-        'Managed the end-to-end project lifecycle, from initial client consultation to final deployment.',
-        'Integrated various third-party services and APIs to extend application functionality.',
+       'Contributing to frontend/backend development, deployment workflows, and UI/UX improvements.',
+      'Integrating APIs, cloud services, and automation features into production-ready applications.',
+    ]
+  },
+  {
+    title: 'Application Developer (Freelance)',
+    subtitle: 'H&HA CA Consultant',
+    period: 'Jul 2025 – Oct 2025',
+    description: 'Developed business-oriented web applications and admin management systems.',
+    details: [
+      'Built dashboards, workflow automation tools, and internal management features.',
+      'Worked on frontend interfaces, backend integrations, database handling, and deployment.',
+      'Collaborated with clients to customize solutions based on operational requirements.',
     ]
   },
   {
     title: 'Frontend Developer & UI/UX Designer',
     subtitle: 'Website Designer',
-    period: 'Feb 2025 – May 2025',
-    description: 'Focused on creating intuitive, responsive, and visually appealing user interfaces for various client websites.',
+     period: 'Feb 2025 – Jun 2025',
+    description: 'Designed intuitive, responsive, and visually appealing websites for various clients.',
     details: [
-        'Translated wireframes and mockups into high-quality, functional code.',
-        'Collaborated closely with clients to refine designs and ensure an optimal user experience.',
-        'Enhanced website usability and aesthetic appeal through modern design principles.',
+       'Converted wireframes and design mockups into high-quality frontend implementations.',
+      'Improved website usability, accessibility, and overall user experience through modern UI/UX practices.',
+      'Collaborated directly with clients to refine layouts, branding, and responsive behavior.',
+      'Static Website Projects: SR Construction, Varma Interior Design, Dermatologist Static Website, VS Enterprise, Magnetic Frames Static Website.',
     ]
   },
   {
-    title: 'Freelance Developer',
-    subtitle: 'Collaborations on Personal Projects',
-    period: 'Feb 2024 – Nov 2024',
-    description: 'Worked as a freelancer on a variety of projects for friends and personal connections, as detailed in the freelancing projects section.',
+ title: 'Robotic Engineer (Contract-Based)',
+    subtitle: 'Cloud Kitchen Startup',
+    period: 'Dec 2024 – Mar 2025',
+    description: 'Worked on robotic automation systems for cloud kitchen operations.',
     details: [
-        'Provided web development and design services for small-scale applications.',
-        'Gained practical experience by building projects from concept to deployment.',
-        'Honed skills in client communication and project management within informal settings.',
-    ]
+              'Assisted in integrating robotics workflows with software-controlled operations.',
+      'Supported testing, troubleshooting, and process optimization for automated kitchen systems.',
+      'Contributed to improving operational efficiency and workflow automation.',
+       ]
   },
 ];
+
 
 export const CERTIFICATIONS: Certification[] = [
     { title: "Java Training", issuer: "Spoken Tutorial, IIT Bombay", year: "2023", url: "https://drive.google.com/file/d/127zc76mb71F9so5rdHXpeBHobEb9KaOU/view?usp=drivesdk" },
