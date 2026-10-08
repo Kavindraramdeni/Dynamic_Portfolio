@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { name: 'SKILLS', page: 'home', section: '#skills', icon: <SkillsIcon /> },
   { name: 'EDUCATION', page: 'education', icon: <EducationIcon /> },
   { name: 'PORTFOLIO', page: 'home', section: '#portfolio', icon: <ProjectsIcon /> },
+  { name: 'PAYUI LAB', page: 'payui', icon: <ProjectsIcon /> },
  // { name: 'BLOG', page: 'blog', icon: <BlogIcon /> },
   { name: 'CONTACT', page: 'home', section: '#contact', icon: <ContactIcon /> },
   { name: 'ADMIN', page: 'admin', icon: <AdminIcon /> },
