@@ -17,6 +17,7 @@ import { CollapsibleProjectSection } from './components/CollapsibleProjectSectio
 import { Preloader } from './components/Preloader';
 import { AuthProvider } from './contexts/AuthContext';
 import { CodeIcon } from './components/Icons';
+import { PayUIShowcase } from './components/PayUIShowcase';
 
 const EducationPage = lazy(() => import('./components/EducationPage'));
 const BlogPage = lazy(() => import('./components/BlogPage'));
@@ -345,6 +346,8 @@ function App() {
         return <BlogPage onBack={handleBackToHome} onProjectSelect={handleProjectSelect} projects={blogProjects} />;
       case 'admin':
         return <AdminPage onBack={handleBackToHome} />;
+      case 'payui':
+        return <PayUIShowcase />;
       case 'home':
       default:
         return (
